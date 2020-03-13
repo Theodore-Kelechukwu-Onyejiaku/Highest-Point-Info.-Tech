@@ -1,13 +1,14 @@
+<h3><a href="/admin/addOrEditStudent" class="btn btn-secondary"><i class="fa fa-plus"></i>create new</a>{{viewTitle}}</h3>
 <table class="table table-responsive table-stripes">
     <thead>
         <tr>
             <th>Full Name</th>
-            <th>Address</th>
             <th>Date of Birth</th>
             <th>Email</th>
-            <th>Number</th>
+            <th>Number</th> 
             <th>Username</th>
-            <th>Password</th>
+            <th>Address</th>
+            <th>Edit/Delete</th>
             <th></th>
             <th></th>
         </tr>
@@ -22,8 +23,8 @@
                 <td>{{this.username}}</td>
                 <td>{{this.address}}</td>
                 <td>
-                    <a href=""><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
-                    <a href=""><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                    <a href="/admin/addOrEditStudent/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                    <a href="/admin/student/delete/{{this._id}}" onclick="return confirm('are you sure you want to delete this record');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
                 </td>
             </tr>
         {{/each}}

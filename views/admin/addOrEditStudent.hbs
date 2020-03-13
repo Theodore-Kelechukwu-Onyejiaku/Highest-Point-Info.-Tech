@@ -1,40 +1,41 @@
-<h3>{{viewTitle}}</h3>
-<div class="container">
+<div class="container">{{viewTitle}}
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <form action="/admin/addOrEditStudent" method="POST">
+            <input type="hidden" name="_id" value="{{student._id}}">
                 <div class="form-group">
                     <label for="">Full Name</label>
-                    <input type="text" name="name" id="" class="form-control" placeholder="Full Name">
+                    <input type="text" name="name" id="" value="{{student.name}}" class="form-control" placeholder="Full Name">
                 </div>
                 <div class="form-group">
                     <label for="">Address</label>
-                    <input type="text" name="address" id="" class="form-control" placeholder="Home Address">
+                    <input type="text" name="address" value="{{student.address}}" id="" class="form-control" placeholder="Home Address">
                 </div>
                 <div class="form-group">
                     <label for="">Date of Birth</label>
-                    <input type="date" name="dob" id="" class="form-control" placeholder="Date of Birth">
+                    <input type="date" name="dob" value="{{student.dob}}" id="" class="form-control" placeholder="Date of Birth">
                 </div>
                 <div class="form-group">
                     <label for="">Email Address</label>
-                    <input type="email" name="email" id="" class="form-control" placeholder="Email Address">
+                    <input type="email" name="email" value="{{student.email}}" id="" class="form-control" placeholder="Email Address">
                 </div>
                 <div class="form-group">
                     <label for="">Phone Number</label>
-                    <input type="text" name="number" id="" class="form-control" placeholder="Phone Number">
+                    <input type="text" name="number" value="{{student.number}}" id="" class="form-control" placeholder="Phone Number">
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="" >Username</label>
-                        <input type="text" name="username" id="" class="form-control" placeholder="username">
+                        <input type="text" name="username" value="{{student.username}}" id="" class="form-control" placeholder="username">
                     </div>
                     <div class="form-group col-md-6">
                          <label for="">Password</label>
-                         <input type="password" name="password" id="" class="form-control" placeholder="**********">
+                         <input type="password" name="password" value="{{student.password}}" id="" class="form-control" placeholder="**********">
                     </div>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+                    <a href="/admin/studentList" class="btn btn-secondary"><i class="fa fa-list-alt"></i>View All</a>
                 </div>
                 </div>
             </form>
