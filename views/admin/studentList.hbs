@@ -1,0 +1,31 @@
+<table class="table table-responsive table-stripes">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Address</th>
+            <th>Date of Birth</th>
+            <th>Email</th>
+            <th>Number</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.dob}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.number}}</td>
+                <td>{{this.username}}</td>
+                <td>{{this.address}}</td>
+                <td>
+                    <a href=""><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

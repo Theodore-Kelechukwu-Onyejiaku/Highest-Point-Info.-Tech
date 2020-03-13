@@ -2,12 +2,20 @@ require("./models/db")
 const express = require("express");
 const app = express();
 const path = require("path");
-const exphs = require("express-handlebars")
+const exphs = require("express-handlebars");
+const bodyparser = require("body-parser");
+
 
 
 //Importing Controllers
 const studentController = require("./controllers/studentController")
 const adminController = require("./controllers/adminController")
+
+//Importing the body-parser middle ware
+app.use(bodyparser.urlencoded({
+    extended: true
+}));
+app.use(bodyparser.json());
 
 //Setting Up template engine
 app.set("views", path.join(__dirname,"/views/"));

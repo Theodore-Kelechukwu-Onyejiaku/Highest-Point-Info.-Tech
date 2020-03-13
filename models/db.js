@@ -7,3 +7,6 @@ mongoose.connect("mongodb://localhost:27017/HighestPoint", {useNewUrlParser: tru
         console.log("Database connection successful")
     }
 })
+
+//Registering the Student model
+require("./student")
