@@ -2,8 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const router = express.Router();
 const Student = mongoose.model("Student");
+const Course = mongoose.model("Course");
 
 
+
+
+/******************************************************************************************************/
 //  GET REQUESTS
 
 /**
@@ -37,7 +41,7 @@ router.get("/addOrEditStudent/:_id", (req, res)=>{
  *  To get a single student and delete
  */
 router.get("/student/delete/:id", (req, res)=>{
-    Student.findOneAndDelete(req.params._id, (err, doc)=>{
+    Student.findByIdAndRemove(req.params.id, (err, doc)=>{
         if(!err){
             res.redirect("/admin/studentList")
         }else{
@@ -99,7 +103,128 @@ router.post("/addOrEditStudent", (req, res)=>{
     }
 })
 
+/********************************************************************************************************************88 */
+//End of Add and Edit Students
 
+
+
+
+
+
+/********************************************************************************* */
+
+/***
+ * 
+ *  TO VIEW ALL COURSES FROM THE HOME PAGE
+ */
+router.get("/allCourses", (req, res)=>{
+    Course.find((err, doc)=>{
+        if(!err){
+            res.render("admin/allCourses", {"layout": "totalLayout", "list": doc})
+        }else{
+            console.log("Error in fetching data")
+        }
+    })
+})
+
+/**
+ *  Add Or Edit Course Page
+ */
+router.get("/addOrEditCourse", (req, res)=>{
+    res.render("admin/addOrEditCourse", {viewTitle: "Add Course"})
+});
+
+/**
+ *  To get a single course and edit
+ */
+router.get("/addOrEditCourse/:_id", (req, res)=>{
+    Course.findById(req.params._id, (err, doc)=>{
+        if(!err){
+            res.render("admin/addOrEditCourse", {viewTitle: "Edit Course", course: doc})
+        }else{
+            console.err("Error in retrieving data")
+        }
+    })
+})
+
+/**
+ * To get a single course and delete
+*/
+router.get("/course/delete/:id", (req, res)=>{
+            Course.findByIdAndRemove(req.params.id, (err, doc)=>{
+                if(!err){
+                    res.redirect("/admin/courseList")
+                }else{
+                    console.log("Error in deleting data")
+                }
+        })
+})
+
+/**
+ *  To get list of all course 
+ */
+router.get("/courseList", (req, res)=>{
+    Course.find((err, doc)=>{
+        if(!err){
+            res.render("admin/courseList", {list:doc, viewTitle: "Course List"})
+        }else{
+            console.log("Error in reading database")
+        }
+    })
+});
+
+
+
+//POST REQUESTS
+
+/*
+*   To Add Course
+*/
+router.post("/addOrEditCourse", (req, res)=>{
+    const course = new Course();
+    if(req.body._id == ""){
+            course.name = req.body.name;
+            course.duration = req.body.duration;
+            course.cert = req.body.cert;
+            course.price = req.body.price;
+            course.ft1 = req.body.ft1;
+            course.ft2 = req.body.ft2;
+            course.ft3 = req.body.ft3;
+            course.ft4 = req.body.ft4;
+            course.ft5 = req.body.ft5;
+            course.ft6 = req.body.ft6;
+            course.ft7 = req.body.ft7;
+            course.ft8 = req.body.ft8;
+            course.ft9 = req.body.ft9;
+            course.ft10 = req.body.ft10;
+
+
+            course.save((err, doc)=>{
+                if(!err){
+                    res.redirect("/admin/courseList");
+                }else{
+                    console.error("Error inserting into database"+ err)
+                }
+            })     
+    }else{
+    Course.findOneAndUpdate({_id: req.body._id}, req.body, {new: true}, (err, doc)=>{
+        if(!err){
+            res.redirect("/admin/courseList");
+        }else{
+            console.error("Error in updating course information"+ err)
+            res.render("admin/addOrEditCourse",{
+                viewTitle: "Error in updating course data",
+                course: req.body
+                })
+            }
+        })
+    }
+})
+
+
+
+
+/**********************************************************8 */
 
 
 module.exports = router;

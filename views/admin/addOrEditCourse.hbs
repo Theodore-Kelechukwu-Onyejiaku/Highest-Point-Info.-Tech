@@ -1,0 +1,71 @@
+<div class="container">{{viewTitle}}
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form action="/admin/addOrEditCourse" method="POST">
+            <input type="hidden" name="_id" value="{{course._id}}">
+                <div class="form-group">
+                    <label for=""><h1>Course Name</h1></label>
+                    <input type="text" name="name" id="" value="{{course.name}}" class="form-control" placeholder="Eg... Computer Operation">
+                </div>
+                 <div class="form-group">
+                    <label for=""><h3>Course Duration</h3></label>
+                    <input type="text" name="duration" id="" value="{{course.duration}}" class="form-control" placeholder="Eg... 3">
+                </div>
+                <div class="form-group">
+                    <label for=""><h3>Course Certificate</h3></label>
+                    <input type="text" name="cert" id="" value="{{course.cert}}" class="form-control" placeholder="Diploma in Computer Operation">
+                </div>
+                <div class="form-group">
+                    <label for=""><h3>Course Price</h3></label>
+                    <input type="text" name="price" id="" value="{{course.price}}" class="form-control" placeholder="Eg...55000">
+                </div>
+                <div class="form-group">
+                    <label for="">Feature 1</label>
+                    <input type="text" name="ft1" value="{{course.ft1}}" id="" class="form-control" placeholder="Eg. Introduction To Computer">
+                </div>
+                <div class="form-group">
+                    <label for="">Feature 2</label>
+                    <input type="text" name="ft2" value="{{course.ft2}}" id="" class="form-control" placeholder="Eg. Scanning">
+                </div>
+                <div class="form-group">
+                    <label for="">Feature 3</label>
+                    <input type="text" name="ft3" value="{{course.ft3}}" id="" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Feature 4</label>
+                    <input type="text" name="ft4" value="{{course.ft4}}" id="" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Feature 5</label>
+                    <input type="text" name="ft5" value="{{course.ft5}}" id="" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Feature 6</label>
+                    <input type="text" name="ft6" value="{{course.ft6}}" id="" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Feature 7</label>
+                    <input type="text" name="ft7" value="{{course.ft7}}" id="" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Feature 8</label>
+                    <input type="text" name="ft8" value="{{course.ft8}}" id="" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Feature 9</label>
+                    <input type="text" name="ft9" value="{{course.ft9}}" id="" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Feature 10</label>
+                    <input type="text" name="ft10" value="{{course.ft10}}" id="" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+                    <a href="/admin/courseList" class="btn btn-secondary"><i class="fa fa-list-alt"></i>View All</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+                </div>

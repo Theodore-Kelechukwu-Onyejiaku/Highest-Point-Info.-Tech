@@ -10,3 +10,6 @@ mongoose.connect("mongodb://localhost:27017/HighestPoint", {useNewUrlParser: tru
 
 //Registering the Student model
 require("./student")
+
+//REgistering the Course model
+require("./course")

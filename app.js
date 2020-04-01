@@ -10,7 +10,7 @@ const bodyparser = require("body-parser");
 //Importing Controllers
 const studentController = require("./controllers/studentController")
 const adminController = require("./controllers/adminController")
-
+const visitorController = require("./controllers/visitorController")
 //Importing the body-parser middle ware
 app.use(bodyparser.urlencoded({
     extended: true
@@ -25,7 +25,7 @@ app.set("view engine", "hbs");
 //Using Controllers
 app.use("/student", studentController)
 app.use("/admin", adminController)
-
+app.use("/visitor", visitorController)
 //Static Page
 app.use(express.static("public"));
 

@@ -1,130 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Registeration</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="img/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--=============================================/==================================================-->
+	<link rel="stylesheet" type="text/css" href="/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--=============================================/==================================================-->
+	<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+<!--=============================================/==================================================-->	
+	<link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
+<!--=============================================/==================================================-->
+	<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
+<!--=============================================/==================================================-->
+	<link rel="stylesheet" type="text/css" href="/css/util2.css">
+	<link rel="stylesheet" type="text/css" href="/css/main2.css">
 <!--===============================================================================================-->
 </head>
-<body style="background-color: #999999;">
+<body>
+	
 	<div class="limiter">
 		<div class="container-login100">
-			<div class="login100-more" style="background-image: url('img/bg-01.jpg');"></div>
-
-			<div class="wrap-login100 p-l-50 p-r-50 p-t-0 p-b-0">
-				<form class="login100-form validate-form" autocomplete="on">
-					<div class="wrap-input100 validate-input" data-validate="Name is required">
-						<span class="label-input100">Full Name</span>
-						<input class="input100" type="text" name="name" placeholder="Name...">
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-5 p-b-30">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-22">
+						Register
+					</span>
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="name" placeholder="Full Name">
 						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-user"></span>
+						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<span class="label-input100">Email</span>
-						<input class="input100" type="text" name="email" placeholder="Email addess...">
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="email" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-envelope"></span>
+						</span>
 					</div>
-					<div class="wrap-input100 validate-input" data-validate = "Valid date of birth is required: ex@abc.xyz">
-						<span class="label-input100">Date of Birth</span>
+
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Enter your address">
+						<input class="input100" type="text" name="name" placeholder="Address">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-home"></span>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Date of birth">
 						<input class="input100" type="date" name="dob">
 						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-clock"></span>
+						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Username is required">
-						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Username...">
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="phone" placeholder="Phone Number">
 						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-phone"></span>
+						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="password" id="pw1" placeholder="*************">
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+						<input class="input100" type="password" name="pass" placeholder="Password">
 						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-lock"></span>
+						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
-						<span class="label-input100">Repeat Password</span>
-						<input class="input100" type="password" name="repeat-pass" id="pw2" placeholder="*************">
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+						<input class="input100" type="password" name="pass" placeholder="Confirm Password">
 						<span class="focus-input100"></span>
-						<span class="bg-danger text-white" id="warning" style="display:none">Passwords do not match</span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-lock"></span>
+						</span>
 					</div>
 
-					<div class="flex-m w-full p-b-10">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-						</div>
-						
+					<div class="contact100-form-checkbox m-l-4">
+						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+						<label class="label-checkbox100" for="ckb1">
+							Remember me
+						</label>
+					</div>
+					
+					<div class="container-login100-form-btn p-t-0">
+						<button class="login100-form-btn">
+							Register
+						</button>
 					</div>
 
-					<div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							<input class='btn btn-danger'style="cursor: pointer;" disabled type="submit" value="Register" id="submitBtn">
-						</div>
-						<a href="index.html" style="font-size:150%" class="dis-block text-danger hov1 p-r-30 p-t-10 p-b-10 p-l-30">
-							<i class="fa fa-home"></i>Home
-							<i class="fa fa-long-arrow-right m-l-5"></i>
-						</a>
+					<div class="text-center w-full p-t-0">
+						<span class="txt1">
+							Already registered?
+						</span>
+
+						<a class="txt1 bo1 hov1" href="login.html">
+							Login							
+						</a><br>
+						<a href="index.html" style="font-size: xx-large;"><i class="fa fa-home"></i>Home</a>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-	<script>
-			const pw1 = document.getElementById("pw1");
-			const pw2 = document.getElementById("pw2");
-			const submitBtn = document.getElementById("submitBtn");
-			const warning = document.getElementById("warning");
 	
-			pw2.addEventListener("input", (e)=>{
-				if(e.target.value !== pw1.value){
-					warning.style.display = "block";
-					submitBtn.disabled = "true"
-				}else{
-					warning.style.display = "none";
-					submitBtn.removeAttribute("disabled");
-				}
-			})
-		</script>
-<!--===============================================================================================-->
+	
+
+	
+<!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/bootstrap/js/popper.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="js/script.js"></script>
-	
+	<script src="js/script2.js"></script>
+
 </body>
 </html>

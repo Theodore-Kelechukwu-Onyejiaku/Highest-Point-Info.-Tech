@@ -1,0 +1,33 @@
+<h3><a href="/admin/addOrEditCourse" class="btn btn-secondary"><i class="fa fa-plus"></i>create new</a>{{viewTitle}}</h3>
+<table class="table table-responsive table-stripes">
+    <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Course Duration</th>
+            <th>Course Certificate</th>
+            <th>Course Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+                <td>Computer Operation</td>
+                <td>2 Months</td>
+                <td>Diploma in Computer Operation</td>
+                <td>#15000</td>
+            </tr>
+        {{#each list}}
+            <tr>
+
+                <td>{{this.name}}</td>
+                <td>{{this.duration}} Months</td>
+                <td>{{this.cert}}</td>
+                <td>#{{this.price}}</td>
+                <td>
+                    <a href="/admin/addOrEditCourse/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                    <a href="/admin/course/delete/{{this._id}}" onclick="return confirm('are you sure you want to delete this record');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
