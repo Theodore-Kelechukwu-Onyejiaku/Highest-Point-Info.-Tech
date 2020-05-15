@@ -4,6 +4,8 @@ const app = express();
 const path = require("path");
 const exphs = require("express-handlebars");
 const bodyparser = require("body-parser");
+const cors = require("cors");
+
 
 
 
@@ -16,6 +18,7 @@ app.use(bodyparser.urlencoded({
     extended: true
 }));
 app.use(bodyparser.json());
+app.use(cors());
 
 //Setting Up template engine
 app.set("views", path.join(__dirname,"/views/"));
@@ -25,7 +28,7 @@ app.set("view engine", "hbs");
 //Using Controllers
 app.use("/student", studentController)
 app.use("/admin", adminController)
-app.use("/visitor", visitorController)
+app.use("/", visitorController)
 //Static Page
 app.use(express.static("public"));
 

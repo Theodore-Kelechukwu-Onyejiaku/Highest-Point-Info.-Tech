@@ -2,7 +2,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const router = express.Router();
 const Student = mongoose.model("Student");
+const {validateRegistration, validateLogin} = require("../middlewares/validation");
+const bcrypt = require("bcryptjs");
 
+//configuring dotenv file
+require("dotenv").config();
 
 router.get("/", (req, res)=>{
     res.end("welcoome to the student controller")
