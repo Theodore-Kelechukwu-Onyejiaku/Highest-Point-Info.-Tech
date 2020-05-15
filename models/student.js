@@ -11,10 +11,12 @@ const studentSchema = new mongoose.Schema({
         type:String},
     number: {
         type:String},
-    username: {
+    password: {
         type:String},
-    password: {type:
-        String}
+    date: {
+        type:Date,
+        default: Date.now
+    }
 })
 
 mongoose.model('Student', studentSchema);
